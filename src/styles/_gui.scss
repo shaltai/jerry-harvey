@@ -1,0 +1,424 @@
+// Palette
+
+$color-primary: #00aeff;
+$color-auxiliary: #f8dbbf;
+$color-grey-darkest: #161616;
+$color-grey-dark: #5b5c5c;
+$color-grey: #a7a8a8;
+$color-grey-light: #d8d9d9;
+$color-grey-lightest: #f3f4f4;
+
+// Dimensions
+
+$module-desktop-hd: 19.5rem;
+
+$module-pad: 12.3rem;
+
+$radius: 0.3rem;
+
+// Headings
+
+%heading {
+	line-height: 1.2;
+	font-weight: 900;
+
+	&_level_1 {
+		@extend %heading;
+		font-size: 6rem;
+		letter-spacing: -0.1rem;
+		hyphens: none;
+
+		@media (max-width: 736px) {
+			font-size: 4.5rem;
+		}
+		@media (max-width: 667px) {
+			font-size: 4.1rem;
+		}
+		@media (max-width: 414px) {
+			font-size: 3.9rem;
+		}
+		@media (max-width: 375px) {
+			font-size: 3.5rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 3.2rem;
+		}
+	}
+
+	&_level_2 {
+		@extend %heading;
+		font-size: 5rem;
+		letter-spacing: -0.07rem;
+		hyphens: none;
+
+		@media (max-width: 736px) {
+			font-size: 4.2rem;
+		}
+		@media (max-width: 414px) {
+			font-size: 4rem;
+		}
+		@media (max-width: 375px) {
+			font-size: 3.5rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 3rem;
+		}
+	}
+
+	&_level_3 {
+		@extend %heading;
+		font-size: 3rem;
+		letter-spacing: -0.05rem;
+
+		@media (max-width: 736px) {
+			font-size: 2.8rem;
+		}
+		@media (max-width: 414px) {
+			font-size: 2.6rem;
+		}
+		@media (max-width: 375px) {
+			font-size: 2.4rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 2.1rem;
+		}
+	}
+
+	&_level_4 {
+		@extend %heading;
+		font-size: 2.5rem;
+		letter-spacing: -0.03rem;
+
+		@media (max-width: 768px) {
+			font-size: 2.1rem;
+		}
+		@media (max-width: 414px) {
+			font-size: 1.9rem;
+		}
+		@media (max-width: 375px) {
+			font-size: 1.7rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&_light {
+		@extend %heading;
+		color: $color-grey-lightest;
+	}
+
+	&_dark {
+		@extend %heading;
+		color: $color-grey-darkest;
+	}
+
+	&_outline {
+		@extend %heading;
+		color: transparent;
+		border: 1px solid $color-grey-darkest;
+	}
+}
+
+// Paragraphs
+
+%text {
+	font-weight: 400;
+
+	&_regular {
+		@extend %text;
+		font-size: 1.5rem;
+		line-height: 1.667;
+
+		@media (max-width: 375px) {
+			font-size: 1.3rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&_intro {
+		@extend %text;
+		font-size: 2rem;
+		line-height: 1.5;
+
+		@media (max-width: 414px) {
+			font-size: 1.7rem;
+		}
+		@media (max-width: 375px) {
+			font-size: 1.5rem;
+		}
+		@media (max-width: 320px) {
+			font-size: 1.3rem;
+		}
+	}
+
+	&_dark {
+		@extend %text;
+		color: $color-grey-dark;
+	}
+
+	&_light {
+		@extend %text;
+		color: $color-grey-lightest;
+	}
+}
+
+//Overtitles
+
+%overtitle {
+	text-transform: uppercase;
+	letter-spacing: 0.8rem;
+
+	&_size_xxl {
+		@extend %overtitle;
+		font-size: 2.5rem;
+
+		@media (max-width: 414px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&_size_xl {
+		@extend %overtitle;
+		font-size: 1.8rem;
+
+		@media (max-width: 414px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&_size_l {
+		@extend %overtitle;
+		font-size: 1.5rem;
+
+		@media (max-width: 414px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 320px) {
+			font-size: 1rem;
+		}
+	}
+
+	&_size_m {
+		@extend %overtitle;
+		font-size: 1.2rem;
+
+		@media (max-width: 414px) {
+			font-size: 1rem;
+		}
+	}
+
+	&_size_s {
+		@extend %overtitle;
+		font-size: 1rem;
+
+		@media (max-width: 414px) {
+			font-size: 0.8rem;
+		}
+	}
+
+	&_dark {
+		@extend %overtitle;
+		color: $color-grey-darkest;
+		font-weight: 300;
+	}
+
+	&_light {
+		@extend %overtitle;
+		color: $color-grey-lightest;
+		font-weight: 400;
+	}
+}
+
+// Buttons
+
+%button {
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.6rem 4rem;
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 1;
+	border-radius: 0.2rem;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	text-align: center;
+
+	@media (max-width: 768px) {
+		padding: 1.65rem 3rem;
+	}
+
+	&_primary {
+		@extend %button;
+		color: white;
+		border: none;
+		background-color: $color-primary;
+
+		&_outline {
+			@extend %button;
+			background-color: transparent;
+			color: $color-primary;
+			border: $color-primary 0.2rem solid;
+			border-radius: $radius;
+		}
+
+		&_blank {
+			@extend %button;
+			text-decoration: underline;
+			background-color: transparent;
+			color: $color-primary;
+		}
+	}
+
+	&_secondary {
+		@extend %button;
+		color: white;
+		border: none;
+		background-color: $color-grey-darkest;
+
+		&_outline {
+			@extend %button;
+			background-color: transparent;
+			color: $color-grey-darkest;
+			border: $color-grey-darkest 0.2rem solid;
+			border-radius: $radius;
+		}
+		&_outline:hover {
+			border: $color-primary 0.2rem solid;
+			color: $color-primary;
+			box-shadow: 0 1rem 1rem rgba(0, 115, 168, 0.24), 0 0 1rem rgba(0, 115, 168, 0.12);
+			transition: all 0.5s ease-out;
+		}
+
+		&_blank {
+			@extend %button;
+			text-decoration: underline;
+			background-color: transparent;
+			color: $color-grey-darkest;
+		}
+		&_blank:hover {
+			color: $color-primary;
+			transition: color 0.5s ease-out;
+		}
+	}
+
+	&_light {
+		@extend %button;
+		color: $color-primary;
+		border: none;
+		background-color: $color-grey-lightest;
+		&:hover {
+			background-color: $color-grey-light;
+			transition: background-color 0.5s ease-out;
+		}
+
+		&_outline {
+			@extend %button;
+			background-color: transparent;
+			color: $color-grey-lightest;
+			border: $color-grey-lightest 0.2rem solid;
+			border-radius: $radius;
+		}
+		&_outline:hover {
+			border: $color-primary 0.2rem solid;
+			color: $color-primary;
+			box-shadow: 0 1rem 1rem rgba(0, 115, 168, 0.24), 0 0 1rem rgba(0, 115, 168, 0.12);
+			transition: all 0.5s ease-out;
+		}
+
+		&_blank {
+			@extend %button;
+			text-decoration: underline;
+			background-color: transparent;
+			color: $color-grey-lightest;
+		}
+		&_blank:hover {
+			color: $color-primary;
+			transition: all 0.5s ease-out;
+		}
+	}
+}
+
+// Links
+
+%link {
+	text-decoration: underline;
+	&_dark {
+		@extend %link;
+		color: $color-grey-dark;
+	}
+	&_light {
+		@extend %link;
+		color: $color-grey-lightest;
+	}
+}
+
+// Inputs
+
+input.lnd-input {
+	height: 5rem;
+	font-size: 1.5rem;
+	line-height: 1;
+	border: none;
+}
+
+input[type='text'].lnd-input {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: transparent;
+
+	&_dark {
+		color: $color-grey-dark;
+		border-bottom: 0.2rem solid $color-grey-dark;
+	}
+
+	&_light {
+		color: $color-grey-light;
+		border-bottom: 0.2rem solid $color-grey-light;
+	}
+}
+
+input[type='text']:hover.lnd-input {
+	transition: border-bottom 0.5s ease-out;
+	&_dark {
+		border-bottom: 0.2rem solid $color-grey-darkest;
+	}
+	&_light {
+		border-bottom: 0.2rem solid $color-grey-lightest;
+	}
+}
+
+input[type='text']:focus.lnd-input {
+	outline: none;
+	border-bottom: 0.2rem solid $color-primary;
+	transition: border-bottom 0.5s ease-out;
+}
+
+input[type='text']::placeholder.lnd-input {
+	transition: color 0.5s ease-out;
+	&_dark {
+		color: $color-grey-dark;
+	}
+	&_light {
+		color: $color-grey-light;
+	}
+}
+
+input[type='submit'] {
+	// @extend %button_secondary;
+	border: none;
+	cursor: pointer;
+}
+
+// input[type='submit']:hover {
+// 	background-color: $color-primary;
+// 	box-shadow: 0 1rem 1rem rgba(0, 115, 168, 0.24), 0 0 1rem rgba(0, 115, 168, 0.12);
+// 	transition: all 0.5s ease-out;
+// }

@@ -1,0 +1,70 @@
+// Hero section styles
+
+.lnd-hero {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 2.5rem;
+	padding-bottom: 3.5rem;
+	text-align: center;
+	background-image: url(../img/photo-jh-hero_desktop.min.jpg);
+	background-image: -webkit-image-set(
+		url(../img/photo-jh-hero_desktop.min.jpg) 1x,
+		url(../img/photo-jh-hero_desktop@2x.min.jpg) 2x
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+
+	@media (max-width: 768px) {
+		padding-bottom: 4rem;
+		background-image: url(../img/photo-jh-hero_tablet.min.jpg);
+		background-image: -webkit-image-set(
+			url(../img/photo-jh-hero_tablet.min.jpg) 1x,
+			url(../img/photo-jh-hero_tablet@2x.min.jpg) 2x
+		);
+	}
+	@media (max-width: 414px) {
+		padding-bottom: 4rem;
+		background-image: url(../img/photo-jh-hero_phone.min.jpg);
+		background-image: -webkit-image-set(
+			url(../img/photo-jh-hero_phone.min.jpg) 1x,
+			url(../img/photo-jh-hero_phone@2x.min.jpg) 2x
+		);
+	}
+
+	&__overtitle {
+		@extend %overtitle_size_xxl;
+		@extend %overtitle_light;
+		width: 100%;
+		margin-bottom: 23rem;
+
+		@media (max-width: 768px) {
+			margin-bottom: 29rem;
+		}
+		@media (max-width: 414px) {
+			margin-bottom: 40rem;
+		}
+	}
+
+	&__heading {
+		@extend %heading_level_2;
+		@extend %heading_light;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	&__subtitle {
+		@extend %heading_level_3;
+		font-size: 2.1rem;
+
+		@media (max-width: 375px) {
+			line-height: 1;
+		}
+	}
+
+	&__text {
+		@extend %text_intro;
+		@extend %text_light;
+		width: 100%;
+	}
+}

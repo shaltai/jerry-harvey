@@ -1,0 +1,90 @@
+@import 'gui';
+@import 'fonts';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-size: 10px;
+	min-height: 100%;
+	font-family: 'Harmonia Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	hyphens: auto;
+}
+
+main {
+	overflow: inherit;
+	background-image: url(../img/texture-regular.min.jpg);
+
+	@media (max-width: 1024px) {
+		overflow: hidden;
+	}
+}
+
+a,
+body,
+dd,
+dl,
+dt,
+form,
+h1,
+h2,
+h3,
+h4,
+li,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-weight: normal;
+	font-variant-numeric: lining-nums;
+}
+
+img {
+	display: flex;
+	max-width: 100%;
+	height: auto;
+}
+
+.lnd-container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+<<<<<<< HEAD
+
+	@media (max-width: 768px) {
+		padding: 0;
+	}
+=======
+>>>>>>> 1f68461f677c44b05cf69b4c6943ee39649cdb50
+}
+
+.page-container > .box {
+	@media (max-width: 768px) {
+		padding: 0;
+	}
+}
+
+<<<<<<< HEAD
+@import 'hero';
+
+@import 'catalog';
+
+// @import 'description';
+
+// @import 'features';
+
+// @import 'form-banner';
+
+// @import 'testimonials';
+
+// @import 'contacts';
+=======
+// @import 'hero';
+>>>>>>> 1f68461f677c44b05cf69b4c6943ee39649cdb50
